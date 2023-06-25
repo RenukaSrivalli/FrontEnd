@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300&family=Roboto:ital,wght@0,400;0,700;1,300&display=swap');
+*{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.bannerBgImage{
+    height:100vh;
+    background:url("/images/laptop.jpg");
+    background-size:cover;
+    position:relative;
+}
+.bannerText{
+    text-align:right;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    color:white;
+}
+.bannerTitle{
+    font-size:4rem;
+}
+.bannerDesc{
+    font-size: 2rem;
+}
+.card{
+    cursor:pointer;
+}
+.card:hover{
+    background-color: #AFE1AF;
+    border:2px solid rgb(133, 200, 133)
+}
+.bIcon{
+    width:100%;
+    text-align: center;
+    font-size: 40px;
+}
+.img-fluid:hover{
+    border:2px solid yellowgreen
+}
+.card-img-top{
+    height:50vh;
+}
+#btn{
+    padding: 5px;
+    align-items: center;
+    display: grid;  
+    margin:auto;
+}
+#carouselExampleControlsNoTouching{
+    background-color: #AFE1AF;
+   
+  
+    
+}

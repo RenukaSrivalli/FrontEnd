@@ -1,0 +1,141 @@
+<html>
+    <head>
+<style>
+    table
+    {
+        background-color:bisque;
+        padding :70px;
+       
+
+    }
+    caption{
+        font-size: larger;
+        font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    }
+    button
+    {
+        color:white;
+        background-color:green;
+        margin-left: 150px;
+        width:70px;
+        height:30px;
+        margin-top:30px;
+        border: 10px;
+    }
+    button:hover{
+        color:blue;
+    }
+    input
+    {
+height:30px;
+width:240px;
+border-style: groove;
+    }
+    #x
+    {
+        margin-top: 50px;
+    }
+</style>
+</head>
+         <script>
+function res()
+{
+    document.getElementById("myForm").reset(); 
+}
+            function cal()
+            {
+                var a=document.getElementById("w").value
+                var b= document.getElementById("h").value
+                var ans=((a/b)/b)*10000
+                if(ans<18.5)
+                {
+                    
+                    document.getElementById("z").innerHTML="Under Weight"
+                    var img=document.createElement("img");
+    img.src = "underweight.jpg";
+    img.setAttribute("style","height:10px;")
+    img.setAttribute("style","width:200px;")
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style","text-align:center");
+   
+                
+                }
+                else if(ans>=18.5&&ans<=24.9)
+                {
+                  
+                    document.getElementById("z").innerHTML="Normal"
+                    var img=document.createElement("img");
+    img.src = "healthy.png";
+    img.setAttribute("style","height:100px;")
+    img.setAttribute("style","width:100px;")
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style","text-align:center");
+                }
+                else if(ans>=25&&ans<=29.9)
+                {
+            
+                    document.getElementById("z").innerHTML="Overweight"
+                    var img=document.createElement("img");
+    img.src = "overweight.jpg";
+    img.setAttribute("style","height:200px;")
+    img.setAttribute("style","width:200px;")
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style","text-align:center");
+                }
+               else if(ans>=30&&ans<=39.9)
+                {
+                   
+                    document.getElementById("z").innerHTML="Obesity"
+                    var img=document.createElement("img");
+    img.src = "obesity2.jpg";
+    img.setAttribute("style","height:200px;")
+    img.setAttribute("style","width:200px;")
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style","text-align:center");
+                }
+                else if(a>40)
+                {
+                    
+                    document.getElementById("z").innerHTML="Extreme obesity"
+                    var img=document.createElement("img");
+    img.src = "over obesity.jpg";
+    img.setAttribute("style","height:100px;")
+    img.setAttribute("style","width:100px;")
+    var div = document.getElementById("x");
+    div.appendChild(img);
+    div.setAttribute("style","text-align:center");
+                }
+                else
+                {
+                    alert("Insert the data")
+            
+                }
+            }
+    
+</script>
+
+
+   
+    <body >
+       
+        <table align="center" bordercolor="darkpink">
+        <caption><b>BODY MASS INDEX(BMI)</b></caption><br>
+        <tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr><tr></tr>
+        <tr><td><h2>Height:</h2></td><td><input id="h" type="number" placeholder="Enter height in cm"></td></tr>
+        <tr><td><h2>Weight:</h2></td><td><input id="w" type="number" placeholder="Enter weight in kg"></td></tr>
+        
+        <tr><td><center><button onclick="return cal()">Verify</button></center></td>
+            <form id="myForm">
+            <td><center><button onclick="return res()">Reset</button></center>
+        </td></form></tr><br><br><br>
+        
+        <tr></tr><br><br><br>
+        <tr><td><h1 id="z" style="color:darkorchid"></h1></td><td><div id="x" align="center"></div></td></tr>
+        
+       </table>
+    </body>
+</html>
